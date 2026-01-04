@@ -40,10 +40,10 @@
         };
       };
 
-      helm_ls = {
-        enable = true;
-        filetypes = [ "helm" ];
-      };
+      # helm_ls = {
+      #   enable = true;
+      #   filetypes = [ "helm" ];
+      # };
 
       marksman = {
         enable = true;
