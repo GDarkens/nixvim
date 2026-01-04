@@ -40,10 +40,44 @@
         };
       };
 
+      helm_ls = {
+        enable = true;
+        filetypes = [ "helm" ];
+      };
+
+      marksman = {
+        enable = true;
+        package = pkgs.stable.marksman;
+      };
+
+      nixd = {
+        enable = true;
+
+        settings = {
+          formatting.command = [ "nixpkgs-fmt" ];
+          nixpkgs.expr = "import <nixpkgs> {}";
+        };
+      };
+
+      yamlls = {
+        enable = true;
+        filetypes = [ "yaml" ];
+      };
+
       nushell.enable = true;
       qmlls.enable = pkgs.stdenv.hostPlatform.isLinux;
       sqls.enable = true;
       taplo.enable = true;
+      bashls.enable = true;
+      bashls.package = pkgs.master.bash-language-server;
+      dockerls.enable = true;
+      gopls.enable = true;
+      jsonls.enable = true;
+      lua_ls.enable = true;
+      pylsp.enable = true;
+      terraformls.enable = true;
+      tflint.enable = true;
+      tilt_ls.enable = true;
     };
 
     # keymaps.lspBuf = {
